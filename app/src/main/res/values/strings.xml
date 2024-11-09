@@ -3,7 +3,6 @@
     <string name="story_author">By : %1$s</string>
     <string name="created_at">Created at : %1$s</string>
 
-
     <!--    Placeholder-->
     <string name="story_image_placeholder">Story Image</string>
     <string name="signup_image_contentDescription">Register Image</string>
@@ -17,8 +16,14 @@
     <string name="title_signup_page">Register</string>
     <string name="signup">SIGN UP</string>
     <string name="welcome_message">Welcome to the Story App</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="upload">Upload</string>
+    <string name="go_sign_up">Don\'t have account?</string>
+    <string name="go_sign_in">Already have account?</string>
 
 <!--    Menu -->
+    <string name="login">Login</string>
     <string name="logout">Logout</string>
     <string name="change_language">Change Language</string>
     <string name="more">More</string>
