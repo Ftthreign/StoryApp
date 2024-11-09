@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_logout"
+        android:title="@string/logout"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/more"
+        android:title="@string/more">
+        <menu>
+            <item
+                android:id="@+id/language_english"
+                android:title="@string/english"
+                app:showAsAction="never"/>
+
+            <item
+                android:id="@+id/language_indonesian"
+                android:title="@string/indonesia"
+                app:showAsAction="never"/>
+
+            <item
+                android:id="@+id/language_japanese"
+                android:title="@string/japan"
+                app:showAsAction="never"/>
+
+            <item
+                android:id="@+id/language_russian"
+                android:title="@string/russia"
+                app:showAsAction="never"/>
+        </menu>
+    </item>
+</menu>

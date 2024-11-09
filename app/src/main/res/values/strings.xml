@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">StoryApp</string>
+    <string name="story_author">By : %1$s</string>
+    <string name="created_at">Created at : %1$s</string>
+
+
+    <!--    Placeholder-->
+    <string name="story_image_placeholder">Story Image</string>
+    <string name="signup_image_contentDescription">Register Image</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="creator">Create by : </string>
+    <string name="description">Description : </string>
+    <string name="email_warning">Wrong email format, please use @gmail.com</string>
+    <string name="password_warning">Password Must be at least 8 Character</string>
+    <string name="title_signup_page">Register</string>
+    <string name="signup">SIGN UP</string>
+    <string name="welcome_message">Welcome to the Story App</string>
+
+<!--    Menu -->
+    <string name="logout">Logout</string>
+    <string name="change_language">Change Language</string>
+    <string name="more">More</string>
+    <string name="english">English</string>
+    <string name="indonesia">Indonesia</string>
+    <string name="japan">Japan</string>
+    <string name="russia">Russia</string>
+</resources>
