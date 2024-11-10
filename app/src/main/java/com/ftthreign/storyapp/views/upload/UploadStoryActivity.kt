@@ -9,9 +9,7 @@ import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.lifecycleScope
-import com.ftthreign.storyapp.data.remote.response.AddStoryResponse
 import com.ftthreign.storyapp.databinding.ActivityUploadStoryBinding
 import com.ftthreign.storyapp.helpers.Result
 import com.ftthreign.storyapp.helpers.getImageUri

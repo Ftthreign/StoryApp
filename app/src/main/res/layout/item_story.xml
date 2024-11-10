@@ -13,6 +13,7 @@
 
         <ImageView
             android:id="@+id/story_image"
+            android:transitionName="image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
@@ -28,6 +29,7 @@
 
             <TextView
                 android:id="@+id/story_author"
+                android:transitionName="Author"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/story_author"
@@ -35,6 +37,7 @@
                 />
             <TextView
                 android:id="@+id/story_description"
+                android:transitionName="Description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -45,6 +48,7 @@
 
             <TextView
                 android:id="@+id/time_created"
+                android:transitionName="CreatedAt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/created_at"

@@ -7,7 +7,6 @@ import android.util.AttributeSet
 import android.util.Patterns.EMAIL_ADDRESS
 import androidx.core.content.ContextCompat
 import com.ftthreign.storyapp.R
-import com.google.android.material.color.MaterialColors
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 

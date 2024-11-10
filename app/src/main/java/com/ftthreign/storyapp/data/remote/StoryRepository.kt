@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import com.ftthreign.storyapp.data.remote.api.ApiService
 import com.ftthreign.storyapp.data.remote.response.AddStoryResponse
+import com.ftthreign.storyapp.data.remote.response.ListStoryItem
 import com.ftthreign.storyapp.data.remote.response.StoriesResponse
 import com.ftthreign.storyapp.helpers.Result
 import com.google.gson.Gson
@@ -42,6 +43,9 @@ class StoryRepository(
             }
         }
     }
+
+    @Suppress("UNCHECKED_CAST")
+    suspend fun getListStory() : List<ListStoryItem> = apiService.getStories().listStory as List<ListStoryItem>
 
     fun addStory(
         file : File,

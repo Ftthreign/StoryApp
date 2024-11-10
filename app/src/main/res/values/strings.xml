@@ -24,7 +24,7 @@
     <string name="login_success">Login Success</string>
     <string name="register_success">Register Success</string>
 
-<!--    Menu -->
+    <!--    Menu -->
     <string name="login">Login</string>
     <string name="logout">Logout</string>
     <string name="change_language">Change Language</string>
@@ -33,4 +33,7 @@
     <string name="indonesia">Indonesia</string>
     <string name="japan">Japan</string>
     <string name="russia">Russia</string>
+    <string name="appwidget_text" translatable="false">Our Story</string>
+    <string name="add_widget" translatable="false">Add widget</string>
+    <string name="app_widget_description" translatable="false">This is an app widget description</string>
 </resources>
