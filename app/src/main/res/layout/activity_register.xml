@@ -17,6 +17,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
+        android:alpha="0"
+        tools:alpha="1"
         app:srcCompat="@drawable/sign_up_image" />
 
     <TextView

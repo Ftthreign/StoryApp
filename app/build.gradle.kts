@@ -18,7 +18,7 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        val url = "https://story-api.dicoding.dev/v1"
+        val url = "https://story-api.dicoding.dev/v1/"
         buildConfigField(type = "String", name = "BASE_URL", value = "\"$url\"")
     }
 

@@ -1,8 +1,8 @@
-package com.ftthreign.storyapp.data.response
+package com.ftthreign.storyapp.data.remote.response
 
 import com.google.gson.annotations.SerializedName
 
-data class AddStoryResponse(
+data class RegisterResponse(
 
 	@field:SerializedName("error")
 	val error: Boolean? = null,
