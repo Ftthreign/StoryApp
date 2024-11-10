@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ftthreign.storyapp.R
 import com.ftthreign.storyapp.data.remote.response.ListStoryItem
 import com.ftthreign.storyapp.databinding.ItemStoryBinding
+import com.ftthreign.storyapp.helpers.formatDate
 import com.ftthreign.storyapp.views.details.DetailActivity
 import com.squareup.picasso.Picasso
 
@@ -27,7 +28,7 @@ class StoryListAdapter : ListAdapter<ListStoryItem, StoryListAdapter.StoryViewHo
                 .into(binding.storyImage)
             binding.storyAuthor.text = context.getString(R.string.story_author, data.name)
             binding.storyDescription.text = data.description
-            binding.timeCreated.text = context.getString(R.string.created_at, data.createdAt)
+            binding.timeCreated.text = context.getString(R.string.created_at, formatDate(data.createdAt!!))
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, DetailActivity::class.java)
                 intent.putExtra("STORY_DATA", data)

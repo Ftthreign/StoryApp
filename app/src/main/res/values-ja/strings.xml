@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">ストーリーアプリ</string>
+    <string name="story_author">作成者：%1$s</string>
+    <string name="created_at">作成日：%1$s</string>
+
+    <!-- Placeholder -->
+    <string name="story_image_placeholder">ストーリー画像</string>
+    <string name="signup_image_contentDescription">登録画像</string>
+    <string name="name">名前</string>
+    <string name="email">メール</string>
+    <string name="password">パスワード</string>
+    <string name="creator">作成者： </string>
+    <string name="description">説明： </string>
+    <string name="email_warning">メール形式が間違っています。@gmail.comを使用してください</string>
+    <string name="password_warning">パスワードは8文字以上でなければなりません</string>
+    <string name="title_signup_page">登録</string>
+    <string name="signup">登録</string>
+    <string name="welcome_message">ストーリーアプリへようこそ</string>
+    <string name="gallery">ギャラリー</string>
+    <string name="camera">カメラ</string>
+    <string name="upload">アップロード</string>
+    <string name="go_sign_up">アカウントをお持ちでないですか？</string>
+    <string name="go_sign_in">アカウントをお持ちですか？</string>
+    <string name="login_success">ログイン成功</string>
+    <string name="register_success">登録成功</string>
+
+    <!-- Menu -->
+    <string name="login">ログイン</string>
+    <string name="logout">ログアウト</string>
+    <string name="change_language">言語を変更</string>
+    <string name="more">もっと</string>
+    <string name="english">英語</string>
+    <string name="indonesia">インドネシア語</string>
+    <string name="japan">日本語</string>
+    <string name="russia">ロシア語</string>
+</resources>

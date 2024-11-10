@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Aplikasi Cerita</string>
+    <string name="story_author">Oleh : %1$s</string>
+    <string name="created_at">Dibuat pada : %1$s</string>
+
+    <!-- Placeholder -->
+    <string name="story_image_placeholder">Gambar Cerita</string>
+    <string name="signup_image_contentDescription">Gambar Pendaftaran</string>
+    <string name="name">Nama</string>
+    <string name="email">Email</string>
+    <string name="password">Kata Sandi</string>
+    <string name="creator">Dibuat oleh : </string>
+    <string name="description">Deskripsi : </string>
+    <string name="email_warning">Format email salah, silakan gunakan @gmail.com</string>
+    <string name="password_warning">Kata sandi harus memiliki minimal 8 karakter</string>
+    <string name="title_signup_page">Daftar</string>
+    <string name="signup">DAFTAR</string>
+    <string name="welcome_message">Selamat datang di Aplikasi Cerita</string>
+    <string name="gallery">Galeri</string>
+    <string name="camera">Kamera</string>
+    <string name="upload">Unggah</string>
+    <string name="go_sign_up">Belum memiliki akun?</string>
+    <string name="go_sign_in">Sudah memiliki akun?</string>
+    <string name="login_success">Login Sukses</string>
+    <string name="register_success">Pendaftaran Sukses</string>
+
+    <!-- Menu -->
+    <string name="login">Login</string>
+    <string name="logout">Keluar</string>
+    <string name="change_language">Ganti Bahasa</string>
+    <string name="more">Lainnya</string>
+    <string name="english">Inggris</string>
+    <string name="indonesia">Indonesia</string>
+    <string name="japan">Jepang</string>
+    <string name="russia">Rusia</string>
+</resources>

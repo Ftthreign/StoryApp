@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Приложение Историй</string>
+    <string name="story_author">Автор: %1$s</string>
+    <string name="created_at">Создано: %1$s</string>
+
+    <!-- Placeholder -->
+    <string name="story_image_placeholder">Изображение Истории</string>
+    <string name="signup_image_contentDescription">Изображение Регистрации</string>
+    <string name="name">Имя</string>
+    <string name="email">Электронная почта</string>
+    <string name="password">Пароль</string>
+    <string name="creator">Создано: </string>
+    <string name="description">Описание: </string>
+    <string name="email_warning">Неверный формат электронной почты, используйте @gmail.com</string>
+    <string name="password_warning">Пароль должен содержать минимум 8 символов</string>
+    <string name="title_signup_page">Регистрация</string>
+    <string name="signup">ЗАРЕГИСТРИРОВАТЬСЯ</string>
+    <string name="welcome_message">Добро пожаловать в приложение Историй</string>
+    <string name="gallery">Галерея</string>
+    <string name="camera">Камера</string>
+    <string name="upload">Загрузить</string>
+    <string name="go_sign_up">Нет аккаунта?</string>
+    <string name="go_sign_in">Уже есть аккаунт?</string>
+    <string name="login_success">Успешный вход</string>
+    <string name="register_success">Успешная регистрация</string>
+
+    <!-- Menu -->
+    <string name="login">Войти</string>
+    <string name="logout">Выйти</string>
+    <string name="change_language">Изменить язык</string>
+    <string name="more">Больше</string>
+    <string name="english">Английский</string>
+    <string name="indonesia">Индонезийский</string>
+    <string name="japan">Японский</string>
+    <string name="russia">Русский</string>
+</resources>

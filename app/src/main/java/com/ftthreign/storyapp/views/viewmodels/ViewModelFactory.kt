@@ -18,9 +18,6 @@ class ViewModelFactory(
             modelClass.isAssignableFrom(MainViewModel::class.java) -> {
                 MainViewModel(storyRepository, authRepository) as T
             }
-            modelClass.isAssignableFrom(DetailsViewModel::class.java) -> {
-                DetailsViewModel(storyRepository) as T
-            }
             modelClass.isAssignableFrom(AuthenticationViewModel::class.java) -> {
                 AuthenticationViewModel(authRepository) as T
             }

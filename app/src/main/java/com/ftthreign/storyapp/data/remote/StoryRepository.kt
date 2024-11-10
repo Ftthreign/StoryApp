@@ -5,7 +5,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import com.ftthreign.storyapp.data.remote.api.ApiService
 import com.ftthreign.storyapp.data.remote.response.AddStoryResponse
-import com.ftthreign.storyapp.data.remote.response.ListStoryItem
 import com.ftthreign.storyapp.data.remote.response.StoriesResponse
 import com.ftthreign.storyapp.helpers.Result
 import com.google.gson.Gson
@@ -44,8 +43,6 @@ class StoryRepository(
         }
     }
 
-    suspend fun getStoryList() : List<ListStoryItem?>? = apiService.getStories().listStory
-
     fun addStory(
         file : File,
         description : String
@@ -54,7 +51,7 @@ class StoryRepository(
         val reqBody = description.toRequestBody("text/plain".toMediaType())
         val reqImageData = file.asRequestBody("image/jpeg".toMediaType())
         val multipartBody = MultipartBody.Part.createFormData(
-            "image",
+            "photo",
             file.name,
             reqImageData
         )
