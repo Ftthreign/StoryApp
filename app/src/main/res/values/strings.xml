@@ -21,6 +21,8 @@
     <string name="upload">Upload</string>
     <string name="go_sign_up">Don\'t have account?</string>
     <string name="go_sign_in">Already have account?</string>
+    <string name="login_success">Login Success</string>
+    <string name="register_success">Register Success</string>
 
 <!--    Menu -->
     <string name="login">Login</string>

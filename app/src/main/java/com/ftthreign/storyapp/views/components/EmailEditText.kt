@@ -5,7 +5,9 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.AttributeSet
 import android.util.Patterns.EMAIL_ADDRESS
+import androidx.core.content.ContextCompat
 import com.ftthreign.storyapp.R
+import com.google.android.material.color.MaterialColors
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
@@ -24,6 +26,9 @@ class EmailEditText @JvmOverloads constructor(
                     } else {
                         setError(context.getString(R.string.email_warning), null)
                         getHelper.helperText = context.getString(R.string.email_warning)
+                        getHelper.setHelperTextColor(
+                            ContextCompat.getColorStateList(context, R.color.error)
+                        )
                     }
                 }
             }

@@ -17,7 +17,7 @@ class AuthRepository(
     private val userPreference: UserPreference
 ) {
 
-    suspend fun registerUser(name : String, email : String, password : String) : LiveData<Result<RegisterResponse>> = liveData {
+    fun registerUser(name : String, email : String, password : String) : LiveData<Result<RegisterResponse>> = liveData {
         try {
             emit(Result.Loading)
             val res = apiService.register(name, email, password)
@@ -39,7 +39,7 @@ class AuthRepository(
         }
     }
 
-    suspend fun loginUser(email: String, password: String) : LiveData<Result<LoginResponse>> = liveData {
+    fun loginUser(email: String, password: String) : LiveData<Result<LoginResponse>> = liveData {
         try {
             emit(Result.Loading)
             val res = apiService.login(email, password)

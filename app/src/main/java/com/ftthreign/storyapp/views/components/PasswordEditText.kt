@@ -4,6 +4,7 @@ import android.content.Context
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.AttributeSet
+import androidx.core.content.ContextCompat
 import com.ftthreign.storyapp.R
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -25,6 +26,9 @@ class PasswordEditText @JvmOverloads constructor(
 
                 if (s.toString().length < 8) {
                     parentLayout.helperText = context.getString(R.string.password_warning)
+                    parentLayout.setHelperTextColor(
+                        ContextCompat.getColorStateList(context, R.color.error)
+                    )
                 } else {
                     parentLayout.helperText = null
                 }

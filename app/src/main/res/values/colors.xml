@@ -5,4 +5,5 @@
     <color name="green_leaf">#88C273</color>
     <color name="sea_blue">#7AB2D3</color>
     <color name="eyes_blue">#006BFF</color>
+    <color name="error">#FF0000</color>
 </resources>
