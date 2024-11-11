@@ -27,7 +27,7 @@ internal class StackRemoteViewsFactory(
 
     override fun onDataSetChanged() {
         mWidgetItems.clear()
-        var image : List<ListStoryItem> = listOf()
+        var image : List<ListStoryItem>
 
         runBlocking {
             image = storyRepository.getListStory()
