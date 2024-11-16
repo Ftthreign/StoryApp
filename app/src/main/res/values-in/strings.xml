@@ -35,4 +35,5 @@
     <string name="japan">Jepang</string>
     <string name="russia">Rusia</string>
     <string name="story_location">Lokasi Cerita</string>
+    <string name="enable_location">Aktifkan Lokasi</string>
 </resources>

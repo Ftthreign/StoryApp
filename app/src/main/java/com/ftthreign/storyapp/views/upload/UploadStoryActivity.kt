@@ -47,7 +47,6 @@ class UploadStoryActivity : AppCompatActivity() {
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
         setupAction()
-        getCurrentLocation()
     }
 
     private fun setupAction() {
@@ -55,6 +54,14 @@ class UploadStoryActivity : AppCompatActivity() {
             binding.imagePreview.setImageURI(image)
         }
 
+        binding.buttonEnableLocation.setOnCheckedChangeListener {_, isChecked->
+            if(isChecked) {
+                getCurrentLocation()
+            } else {
+                lat = null
+                lon = null
+            }
+        }
         binding.buttonGallery.setOnClickListener { startGallery() }
         binding.buttonCamera.setOnClickListener { startCamera() }
         binding.buttonUpload.setOnClickListener { uploadStory() }

@@ -35,4 +35,5 @@
     <string name="japan">Японский</string>
     <string name="russia">Русский</string>
     <string name="story_location">Местоположение истории</string>
+    <string name="enable_location">Включить геолокацию</string>
 </resources>

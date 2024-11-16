@@ -58,6 +58,23 @@
         android:padding="8dp"
         tools:ignore="TextFields" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity=""
+            android:layout_marginEnd="24dp"
+            android:text="@string/enable_location"/>
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/buttonEnableLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
     <Button
         android:id="@+id/buttonUpload"
         android:layout_width="match_parent"

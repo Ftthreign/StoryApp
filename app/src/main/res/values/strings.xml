@@ -40,4 +40,5 @@
     <string name="appwidget_text" translatable="false">Our Story</string>
     <string name="add_widget" translatable="false">Add widget</string>
     <string name="app_widget_description" translatable="false">This is an app widget description</string>
+    <string name="enable_location">Enable Location</string>
 </resources>
