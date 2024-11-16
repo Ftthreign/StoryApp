@@ -49,18 +49,23 @@ class StoryRepository(
 
     fun addStory(
         file : File,
-        description : String
+        description : String,
+        lat : Float? = null,
+        lon : Float? = null
     ) : LiveData<Result<AddStoryResponse>> = liveData {
         emit(Result.Loading)
         val reqBody = description.toRequestBody("text/plain".toMediaType())
         val reqImageData = file.asRequestBody("image/jpeg".toMediaType())
+        val latReqData = lat?.toString()?.toRequestBody("text/plain".toMediaType())
+        val lonReqData = lon?.toString()?.toRequestBody("text/plain".toMediaType())
         val multipartBody = MultipartBody.Part.createFormData(
             "photo",
             file.name,
-            reqImageData
+            reqImageData,
+
         )
         try {
-            val res = apiService.addStory( multipartBody, reqBody)
+            val res = apiService.addStory( multipartBody, reqBody, latReqData, lonReqData)
             if (!res.error!!) {
                 emit(Result.Success(res))
             } else {

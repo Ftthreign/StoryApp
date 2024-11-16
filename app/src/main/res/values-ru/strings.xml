@@ -28,9 +28,11 @@
     <string name="login">Войти</string>
     <string name="logout">Выйти</string>
     <string name="change_language">Изменить язык</string>
+    <string name="show_map">Показать карту</string>
     <string name="more">Больше</string>
     <string name="english">Английский</string>
     <string name="indonesia">Индонезийский</string>
     <string name="japan">Японский</string>
     <string name="russia">Русский</string>
+    <string name="story_location">Местоположение истории</string>
 </resources>

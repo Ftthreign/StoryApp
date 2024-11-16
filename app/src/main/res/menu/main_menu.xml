@@ -4,6 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/show_map"
+        android:icon="@drawable/ic_baseline_map"
+        android:title="@string/show_map"
+        app:showAsAction="ifRoom"/>
+
+    <item
         android:id="@+id/logout"
         android:icon="@drawable/ic_logout"
         android:title="@string/logout"

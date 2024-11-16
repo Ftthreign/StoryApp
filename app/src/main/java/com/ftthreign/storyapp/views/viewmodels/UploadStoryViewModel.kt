@@ -14,5 +14,5 @@ class UploadStoryViewModel(
 
     fun setCurImage(uri : Uri?) { _curImage.value = uri }
 
-    fun uploadStory(file : File, description : String) = storyRepository.addStory(file, description)
+    fun uploadStory(file : File, description : String, lat : Float?, lon : Float?) = storyRepository.addStory(file, description, lat, lon)
 }

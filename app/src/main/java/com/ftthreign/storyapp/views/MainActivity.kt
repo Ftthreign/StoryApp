@@ -15,6 +15,7 @@ import com.ftthreign.storyapp.helpers.Result
 import com.ftthreign.storyapp.helpers.showMaterialDialog
 import com.ftthreign.storyapp.views.adapter.StoryListAdapter
 import com.ftthreign.storyapp.views.auth.LoginActivity
+import com.ftthreign.storyapp.views.map.MapsActivity
 import com.ftthreign.storyapp.views.upload.UploadStoryActivity
 import com.ftthreign.storyapp.views.viewmodels.MainViewModel
 import com.ftthreign.storyapp.views.viewmodels.ViewModelFactory
@@ -94,6 +95,10 @@ class MainActivity : AppCompatActivity() {
                 showMaterialDialog(this@MainActivity, "Logout", "Are you sure want to logout?", "Yes") {
                     viewModel.logout()
                 }
+                true
+            }
+            R.id.show_map -> {
+                startActivity(Intent(this@MainActivity, MapsActivity::class.java))
                 true
             }
             R.id.language_english -> {

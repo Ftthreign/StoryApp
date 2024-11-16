@@ -24,6 +24,9 @@ class ViewModelFactory(
             modelClass.isAssignableFrom(UploadStoryViewModel::class.java) -> {
                 UploadStoryViewModel(storyRepository) as T
             }
+            modelClass.isAssignableFrom(MapsViewModel::class.java) -> {
+                MapsViewModel(storyRepository) as T
+            }
             else -> {
                 Log.e(ViewModelFactory::class.java.simpleName, "Unknown ViewModel") as T
                 throw IllegalArgumentException("Unknown ViewModel ${modelClass.name}")

@@ -9,6 +9,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
+import android.widget.Toast
 import androidx.core.content.FileProvider
 import androidx.exifinterface.media.ExifInterface
 import com.ftthreign.storyapp.BuildConfig
@@ -123,6 +124,10 @@ fun showMaterialDialog(
         }
         .setCancelable(true)
         .show()
+}
+
+fun showToast(context: Context, message: String, duration: Int = Toast.LENGTH_SHORT) {
+    Toast.makeText(context, message, duration).show()
 }
 
 fun formatDate(date : String) : String {

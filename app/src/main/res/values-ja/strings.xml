@@ -28,9 +28,11 @@
     <string name="login">ログイン</string>
     <string name="logout">ログアウト</string>
     <string name="change_language">言語を変更</string>
+    <string name="show_map">地図を表示</string>
     <string name="more">もっと</string>
     <string name="english">英語</string>
     <string name="indonesia">インドネシア語</string>
     <string name="japan">日本語</string>
     <string name="russia">ロシア語</string>
+    <string name="story_location">ストーリーの場所</string>
 </resources>

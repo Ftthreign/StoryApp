@@ -28,9 +28,11 @@
     <string name="login">Login</string>
     <string name="logout">Keluar</string>
     <string name="change_language">Ganti Bahasa</string>
+    <string name="show_map">Tampilkan Peta</string>
     <string name="more">Lainnya</string>
     <string name="english">Inggris</string>
     <string name="indonesia">Indonesia</string>
     <string name="japan">Jepang</string>
     <string name="russia">Rusia</string>
+    <string name="story_location">Lokasi Cerita</string>
 </resources>
