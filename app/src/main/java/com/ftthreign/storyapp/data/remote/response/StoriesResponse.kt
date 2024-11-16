@@ -1,13 +1,15 @@
 package com.ftthreign.storyapp.data.remote.response
 
 import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
 data class StoriesResponse(
 
     @field:SerializedName("listStory")
-	val listStory: List<ListStoryItem?>? = null,
+	val listStory: List<ListStoryItem>,
 
     @field:SerializedName("error")
 	val error: Boolean? = null,
@@ -17,6 +19,7 @@ data class StoriesResponse(
 )
 
 @Parcelize
+@Entity(tableName = "story")
 data class ListStoryItem(
 
 	@field:SerializedName("photoUrl")
@@ -35,7 +38,8 @@ data class ListStoryItem(
 	val lon: Double? = null,
 
 	@field:SerializedName("id")
-	val id: String? = null,
+	@PrimaryKey
+	val id: String,
 
 	@field:SerializedName("lat")
 	val lat: Double? = null

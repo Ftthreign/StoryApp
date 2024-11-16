@@ -11,8 +11,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ftthreign.storyapp.R
 import com.ftthreign.storyapp.databinding.ActivityMainBinding
-import com.ftthreign.storyapp.helpers.Result
 import com.ftthreign.storyapp.helpers.showMaterialDialog
+import com.ftthreign.storyapp.views.adapter.LoadingStateAdapter
 import com.ftthreign.storyapp.views.adapter.StoryListAdapter
 import com.ftthreign.storyapp.views.auth.LoginActivity
 import com.ftthreign.storyapp.views.map.MapsActivity
@@ -50,25 +50,19 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupRv() {
         binding.recyclerView.apply {
-            adapter = storyAdapter
+            adapter = storyAdapter.withLoadStateFooter(
+                footer = LoadingStateAdapter {
+                    storyAdapter.retry()
+                }
+            )
             layoutManager = LinearLayoutManager(this@MainActivity)
         }
     }
 
     private fun setupData() {
-        viewModel.getStory().observe(this) {data ->
-            when(data) {
-                is Result.Loading -> {
-                    binding.loadStory.visibility = View.VISIBLE
-                }
-                is Result.Error -> {
-                    binding.loadStory.visibility = View.GONE
-                }
-                is Result.Success -> {
-                    binding.loadStory.visibility = View.GONE
-                    storyAdapter.submitList(data.data.listStory)
-                }
-            }
+        viewModel.story.observe(this) {data ->
+            storyAdapter.submitData(lifecycle, data)
+            binding.loadStory.visibility = View.GONE
         }
     }
 

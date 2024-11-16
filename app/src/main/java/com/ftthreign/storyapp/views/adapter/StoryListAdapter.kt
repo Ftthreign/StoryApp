@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.app.ActivityOptionsCompat
 import androidx.core.util.Pair
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.ftthreign.storyapp.R
 import com.ftthreign.storyapp.data.remote.response.ListStoryItem
@@ -16,7 +16,7 @@ import com.ftthreign.storyapp.helpers.formatDate
 import com.ftthreign.storyapp.views.details.DetailActivity
 import com.squareup.picasso.Picasso
 
-class StoryListAdapter : ListAdapter<ListStoryItem, StoryListAdapter.StoryViewHolder>(DIFF_CALLBACK) {
+class StoryListAdapter : PagingDataAdapter<ListStoryItem, StoryListAdapter.StoryViewHolder>(DIFF_CALLBACK) {
     inner class StoryViewHolder(private val binding : ItemStoryBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(data : ListStoryItem) {
             val context = binding.root.context
@@ -52,7 +52,9 @@ class StoryListAdapter : ListAdapter<ListStoryItem, StoryListAdapter.StoryViewHo
 
     override fun onBindViewHolder(holder: StoryViewHolder, position: Int) {
         val storyData = getItem(position)
-        holder.bind(storyData)
+        if (storyData != null) {
+            holder.bind(storyData)
+        }
     }
 
     companion object {

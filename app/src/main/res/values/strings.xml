@@ -25,6 +25,7 @@
     <string name="register_success">Register Success</string>
     <string name="story_location">Story Location</string>
     <string name="title_activity_maps" translatable="false">MapsActivity</string>
+    <string name="retry_load_page" translatable="false">Retry</string>
 
     <!--    Menu -->
     <string name="login">Login</string>

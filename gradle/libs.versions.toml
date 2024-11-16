@@ -23,7 +23,8 @@ kotlinxCoroutinesCore = "1.9.0"
 picassoVersion = "2.8"
 googleAndroidLibrariesMapsplatformSecretsGradlePlugin = "2.0.1"
 playServicesMaps = "19.0.0"
-
+pagingRuntimeKtx = "3.3.4"
+roomPaging = "2.6.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -69,6 +70,11 @@ squareup-picasso = { module = "com.squareup.picasso:picasso", version.ref = "pic
 # Coroutine
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesCore" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+
+# Paging
+androidx-paging-runtime-ktx = { module = "androidx.paging:paging-runtime-ktx", version.ref = "pagingRuntimeKtx" }
+androidx-room-paging = { module = "androidx.room:room-paging", version.ref = "roomPaging" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

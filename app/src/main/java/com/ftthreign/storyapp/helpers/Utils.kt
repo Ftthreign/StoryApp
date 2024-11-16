@@ -4,15 +4,23 @@ import android.content.ContentValues
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.Canvas
 import android.graphics.Matrix
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
+import android.util.Log
 import android.widget.Toast
+import androidx.annotation.ColorInt
+import androidx.annotation.DrawableRes
 import androidx.core.content.FileProvider
+import androidx.core.content.res.ResourcesCompat
+import androidx.core.graphics.drawable.DrawableCompat
 import androidx.exifinterface.media.ExifInterface
 import com.ftthreign.storyapp.BuildConfig
+import com.google.android.gms.maps.model.BitmapDescriptor
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import java.io.ByteArrayOutputStream
 import java.io.File
@@ -128,6 +136,24 @@ fun showMaterialDialog(
 
 fun showToast(context: Context, message: String, duration: Int = Toast.LENGTH_SHORT) {
     Toast.makeText(context, message, duration).show()
+}
+
+fun vectorToBitmap(@DrawableRes id: Int, @ColorInt color: Int, context : Context): BitmapDescriptor {
+    val vectorDrawable = ResourcesCompat.getDrawable(context.resources, id, null)
+    if (vectorDrawable == null) {
+        Log.e("BitmapHelper", "Resource not found")
+        return BitmapDescriptorFactory.defaultMarker()
+    }
+    val bitmap = Bitmap.createBitmap(
+        100,
+        100,
+        Bitmap.Config.ARGB_8888
+    )
+    val canvas = Canvas(bitmap)
+    vectorDrawable.setBounds(0, 0, canvas.width, canvas.height)
+    DrawableCompat.setTint(vectorDrawable, color)
+    vectorDrawable.draw(canvas)
+    return BitmapDescriptorFactory.fromBitmap(bitmap)
 }
 
 fun formatDate(date : String) : String {

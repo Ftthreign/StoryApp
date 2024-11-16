@@ -6,4 +6,5 @@ import com.ftthreign.storyapp.data.remote.StoryRepository
 class MapsViewModel(
     private val storyRepository: StoryRepository
 ) : ViewModel() {
+    fun getStoriesWithLocation() = storyRepository.getStoriesWithLocation(location = 1)
 }

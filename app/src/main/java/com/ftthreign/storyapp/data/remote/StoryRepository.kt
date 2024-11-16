@@ -3,6 +3,13 @@ package com.ftthreign.storyapp.data.remote
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
+import androidx.paging.ExperimentalPagingApi
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.PagingData
+import androidx.paging.liveData
+import com.ftthreign.storyapp.data.StoryRemoteMediator
+import com.ftthreign.storyapp.data.local.database.StoryDatabase
 import com.ftthreign.storyapp.data.remote.api.ApiService
 import com.ftthreign.storyapp.data.remote.response.AddStoryResponse
 import com.ftthreign.storyapp.data.remote.response.ListStoryItem
@@ -18,20 +25,30 @@ import retrofit2.HttpException
 import java.io.File
 
 class StoryRepository(
+    private val storyDatabase: StoryDatabase,
     private val apiService : ApiService,
 ) {
+    @OptIn(ExperimentalPagingApi::class)
+    fun getAllStory() : LiveData<PagingData<ListStoryItem>> {
+        return Pager(
+            config = PagingConfig(
+                pageSize = 5,
+            ),
+            remoteMediator = StoryRemoteMediator(storyDatabase, apiService),
+            pagingSourceFactory = {
+                storyDatabase.storyDao().getAllStory()
+            }
+        ).liveData
+    }
 
-    fun getAllStories(
-    ) : LiveData<Result<StoriesResponse>> = liveData {
+    suspend fun getListStory() : List<ListStoryItem> = apiService.getStories().listStory
+
+    fun getStoriesWithLocation(location : Int = 1) : LiveData<Result<StoriesResponse>> = liveData {
         emit(Result.Loading)
         try {
-            val res = apiService.getStories()
+            val res = apiService.getStoriesWithLocation(location)
 
-            if(!res.error!!) {
-                emit(Result.Success(res))
-            } else {
-                emit(Result.Error(res.message ?: "Unknown Error"))
-            }
+            emit(Result.Success(res))
         } catch (e : HttpException) {
             Log.e(StoriesResponse::class.java.simpleName, e.message.toString())
             try {
@@ -44,8 +61,6 @@ class StoryRepository(
         }
     }
 
-    @Suppress("UNCHECKED_CAST")
-    suspend fun getListStory() : List<ListStoryItem> = apiService.getStories().listStory as List<ListStoryItem>
 
     fun addStory(
         file : File,
@@ -90,10 +105,11 @@ class StoryRepository(
         @Volatile
         private var INSTANCE : StoryRepository? = null
         fun getInstance(
+            storyDatabase: StoryDatabase,
             apiService: ApiService,
         ) : StoryRepository =
             INSTANCE ?: synchronized(this) {
-                INSTANCE ?: StoryRepository(apiService)
+                INSTANCE ?: StoryRepository(storyDatabase, apiService)
             }.also { INSTANCE = it }
     }
 }

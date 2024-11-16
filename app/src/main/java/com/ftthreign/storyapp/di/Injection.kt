@@ -1,6 +1,7 @@
 package com.ftthreign.storyapp.di
 
 import android.content.Context
+import com.ftthreign.storyapp.data.local.database.StoryDatabase
 import com.ftthreign.storyapp.data.local.pref.UserPreference
 import com.ftthreign.storyapp.data.local.pref.dataStore
 import com.ftthreign.storyapp.data.remote.AuthRepository
@@ -11,7 +12,8 @@ object Injection {
     fun provideStoryRepository(context: Context): StoryRepository {
         val pref = UserPreference.getInstance(context.dataStore)
         val apiService = ApiConfig.getApiService(pref)
-        return StoryRepository.getInstance(apiService)
+        val storyDatabase = StoryDatabase.getInstance(context)
+        return StoryRepository.getInstance(storyDatabase, apiService)
     }
     fun provideAuthRepository(context: Context): AuthRepository {
         val pref = UserPreference.getInstance(context.dataStore)
