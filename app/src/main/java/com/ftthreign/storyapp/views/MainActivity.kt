@@ -1,5 +1,6 @@
 package com.ftthreign.storyapp.views
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
@@ -66,6 +67,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("AppBundleLocaleChanges")
     @Suppress("DEPRECATION")
     private fun changeAppLanguage(code : String) {
         val locale = Locale(code)
